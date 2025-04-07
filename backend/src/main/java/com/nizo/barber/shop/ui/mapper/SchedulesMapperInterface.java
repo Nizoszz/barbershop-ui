@@ -15,9 +15,9 @@ import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
 @Mapper(componentModel = SPRING)
 public interface SchedulesMapperInterface{
     @Mapping(target = "scheduleId", ignore = true)
-    @Mapping(target = "clientId", source = "client.clientId")
+    @Mapping(target = "clientId", source = "clients")
     ScheduleEntity toEntity(SaveScheduleRequest request);
-    @Mapping(target = "clientId", source = "client.clientId")
+    @Mapping(target = "clientId", source = "clients")
     SaveScheduleResponse toSaveResponse(ScheduleEntity entity);
 
     @Mapping(target = "scheduledAppointments", expression = "java(toClientMonthResponse(entities))")

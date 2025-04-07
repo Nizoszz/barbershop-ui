@@ -1,4 +1,19 @@
 package com.nizo.barber.shop.ui.controller.request;
 
-public record SaveScheduleRequest(){
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
+
+import java.time.OffsetDateTime;
+
+public record SaveScheduleRequest(
+        @NotNull
+        @JsonProperty("startAt")
+        OffsetDateTime startAt,
+        @NotNull
+        @JsonProperty("endAt")
+        OffsetDateTime endAt,
+        @NotNull
+        @JsonProperty("clientId")
+        String clientId
+){
 }

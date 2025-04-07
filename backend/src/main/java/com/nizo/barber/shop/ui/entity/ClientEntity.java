@@ -17,6 +17,7 @@ import static jakarta.persistence.CascadeType.ALL;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
 @NoArgsConstructor
 public class ClientEntity{
     @Id
@@ -27,7 +28,7 @@ public class ClientEntity{
     @Column(nullable = false, length = 150)
     private String email;
 
-    @Column(nullable = false, length = 11, columnDefinition = "bpchar(11)")
+    @Column(nullable = false, length = 11)
     private String phone;
 
     @ToString.Exclude
