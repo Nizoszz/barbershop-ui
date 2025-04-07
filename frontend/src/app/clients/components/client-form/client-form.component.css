@@ -1,0 +1,10 @@
+.fil_col{
+  width: 100%;
+}
+
+.div_button{
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
